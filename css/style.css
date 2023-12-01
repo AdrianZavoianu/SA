@@ -3,19 +3,19 @@
  body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 35px;
-    background-color: gray;
+    background-color: white;
 }
 
 
 header{
     background-color:black;
-    border: 0.2px solid white;
+    border: 0.2px solid gray;
     border-radius: 10px;
 }
 
 main{
     background-color: black;
-    border: 0.2px solid white;
+    border: 0.2px solid gray;
     border-radius: 10px;
 }
 
@@ -25,7 +25,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 0.2px solid white;
+    border: 0.2px solid gray;
     border-radius: 10px;
 }
 
@@ -63,6 +63,9 @@ main{
   
 }
 
+
+
+
 .country_description_sec{
     display: grid;
     grid-template-columns: 60% 40%;
@@ -71,7 +74,7 @@ main{
   
 }
 
-.SA_description_sec>div{
+.SA_description_sec:nth-child(2){
     margin: 20px;
 }
 .country_description_sec>div{

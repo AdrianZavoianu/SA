@@ -10,13 +10,13 @@
 header{
     background-color:black;
     border: 0.2px solid gray;
-    border-radius: 10px;
+
 }
 
 main{
     background-color: black;
     border: 0.2px solid gray;
-    border-radius: 10px;
+
 }
 
 footer{
@@ -26,7 +26,7 @@ footer{
     flex-wrap: wrap;
     justify-content: center;
     border: 0.2px solid gray;
-    border-radius: 10px;
+
 }
 
 ul{
@@ -111,3 +111,5 @@ h1{
     padding: 15px;
 }
 
+img{
+}

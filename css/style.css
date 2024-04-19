@@ -1,27 +1,26 @@
  *{margin: 0; padding: 0;}
  
  body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1rem;
-    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    background-color: #121212; /* Dark background for the whole page */
+    color: #E0E0E0;
+
 }
 
 
 header{
-    background-color:black;
-    border: 0.2px solid gray;
 
+    border: 0.2px solid gray;
 }
 
 main{
-    background-color: black;
+
     border: 0.2px solid gray;
 
 }
 
 footer{
-    background-color: black;
-    color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -30,39 +29,46 @@ footer{
 }
 
 ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
+    display: grid;
+    grid-template-columns: 0.75fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr;
     list-style-type: none;
-    padding: 10px;
+    
+
 }
 
 .logo{
 
-    height:1.5em;
+    
+    grid-column: 1 / 2; /* Starts at the first column, ends at the second column */
+    grid-row: 1 / 4; /* Spans from the first row to the third row */
 
     
 }
 
+.logo-img{
+    height:8em ;
+
+}
+
+
 nav ul li{
-    flex:1 1 40%;
-    /* border: 1px solid red; */
-    margin-left: 1.5em;
+
 }
 
 li>a{
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 li>a:hover{
-    color:#1560BD;
+    color:#4CAF50;
 }
 
 main{
-    color:white;
+
 }
 
 .SA_description_sec{
@@ -91,14 +97,14 @@ main{
 }
 
 p{
-    font-size: 30px;
-    padding: 10px;
+    line-height: 1.3em;
+
 }
 
 h1{
-    font-size: 40px;
-    padding-left: 40px;
-    padding-top: 20px;
+    font-size: 1.5em;
+    padding-left: 1em;
+    padding-top: 1em;
 }
 
 

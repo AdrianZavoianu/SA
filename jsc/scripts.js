@@ -84,15 +84,13 @@ let countriesDescriptions={
     "Colombia":"Colombia is a country that has transcended its tumultuous past to become a vibrant destination."
 }
 
-
-
 // Function to open the modal with specific country info
 function openModal(country) {
     var modal = document.getElementById("countryModal");
     document.getElementById("countryName").textContent = country.properties.name;
     document.getElementById("countryInfo").textContent = countriesDescriptions[country.properties.name];
-    document.getElementById("countryImage").src = "images/" + country.properties.name.toLowerCase() + ".jpg"; // Ensure the image path is correct
-    document.getElementById("readMoreLink").href =country.properties.name.toLowerCase() + ".html"; // Ensure the link path is correct
+    document.getElementById("countryImage").src = "images/" + country.properties.name.toLowerCase() + ".jpg"; 
+    document.getElementById("readMoreLink").href =country.properties.name.toLowerCase() + ".html"; 
     
     modal.style.display = "block";
 }

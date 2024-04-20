@@ -1,0 +1,34 @@
+<p> Explore the Galápagos Islands for unique wildlife encounters, hike the Andes Mountains for breathtaking vistas, or relax on the pristine beaches of the Caribbean and Pacific coasts.
+                    Whether you're an adventure seeker, a history buff, or simply looking to immerse yourself in a vibrant and diverse culture, South America beckons with its warmth, beauty, and an array of experiences that promise to leave a lasting impression.</p>  
+                <p>The continent's warmth extends beyond its tropical climates to the hospitality of its people. Engage in lively conversations in the bustling markets, savor local delicacies, and partake in the festivities that characterize South American life.</p>
+                 <p> Each country has its own unique identity, reflected in the lively street markets of Colombia, the tango-filled streets of Buenos Aires, and the indigenous communities of Bolivia.
+                    For nature enthusiasts, South America is a paradise with its diverse ecosystems.</p> 
+<img src="images/pexels-pixabay-40996.jpg" alt="South America map." width="500">
+
+Vibrant Green (Accents/Buttons): #00C853 - A bright, lively green that stands out against the dark and grey, suitable for call-to-action buttons, icons, or important highlights.
+Soft Green (Secondary Accents): #4CAF50 - A softer shade of green, useful for less prominent accents that still need to differentiate from the main elements but are less intense than the vibrant green.
+
+
+/* .country_description_sec{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content:flex-start;
+} */
+
+/* .SA_description_sec:nth-child(2){
+    margin: 20px;
+}
+.country_description_sec>div{
+    margin: 20px;
+} */
+/* .country_images{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-around;
+}
+
+.country_images>img{
+    width: 450px;
+    height:275px;
+    padding: 15px;
+} */

@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Places to visit in South America</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Places to visit in South America</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <body>
+        <!-- <a href="#main">Skip to Main Content AZ</a> -->
+        <header>
+            <nav>
+                <ul>
+                    <li class="logo"><img src="images/logo.png"></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="peru.html">Peru</a></li>
+                    <li><a href="colombia.html">Colombia</a></li>
+                    <li><a href="argentine.html">Argentina</a></li>
+                    <li><a href="chile.html">Chile</a></li>
+                    <li><a href="brazil.html">Brazil</a></li>
+                </ul>
+            </nav>
+        </header>
 
-<body>
-    <!-- <a href="#main">Skip to Main Content AZ</a> -->
-    <header>
-        <nav>
-            <ul>
-                <li class="logo"><img class="logo-img" src="images/logo.png"></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="peru.html">Peru</a></li>
-                <li><a href="colombia.html">Colombia</a></li>
-                <li><a href="argentine.html">Argentine</a></li>
-                <li><a href="chile.html">Chile</a></li>
-                <li><a href="brazil.html">Brazil</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main id="main">
-        <h1>Visiting South America</h1>
-        <section class="SA_description_sec">
-            <div>
-                <p>South America is a captivating continent that boasts a rich tapestry of cultures, landscapes, and experiences, making it a must-visit destination for travelers seeking diversity and adventure.</p>
-                <p>From the vibrant rhythms of Brazil's Carnival to the awe-inspiring landscapes of Patagonia, South America offers a wide array of attractions.The continent is home to some of the world's most iconic landmarks, including the ancient ruins of Machu Picchu in Peru, the Christ the Redeemer statue overlooking Rio de Janeiro, and the Amazon Rainforest, the planet's largest tropical rainforest with an unparalleled biodiversity.
+        <main id="main">
+            <h1>Visiting South America</h1>
+
+            <section class="text-container">
+                <p>South America is a captivating continent that boasts a rich tapestry of cultures, landscapes, and experiences, making it a
+                     must-visit destination for travelers seeking diversity and adventure. From the vibrant rhythms of Brazil's Carnival to the awe-inspiring landscapes of Patagonia, South America offers a wide array of attractions.The continent is home to some of the world's most iconic landmarks, including the ancient ruins of Machu Picchu in Peru, the Christ the Redeemer statue overlooking Rio de Janeiro, and the Amazon Rainforest, the planet's largest tropical rainforest with an unparalleled biodiversity.
                     South America's cultural diversity is evident in its festivals, cuisine, and traditions.</p>   
-                <p> Each country has its own unique identity, reflected in the lively street markets of Colombia, the tango-filled streets of Buenos Aires, and the indigenous communities of Bolivia.
-                    For nature enthusiasts, South America is a paradise with its diverse ecosystems.</p> 
+            </section>
+
+            <section id="map">
+                <svg id="map-svg"></svg>
+            </section>
+
+            <section class="images-container">
+                <img src="images/pexels-chelsea-cook-2929906.jpg" width="400" alt="Machu Picchu">
+                <img src="images/pexels-luis-dalvan-1684166.jpg" width="400" alt="Patagonia">
+                <img src="images/pexels-luan-gonçalves-13911606.jpg" width="400" alt="Rio de Janeiro">
+                <img src="images/pexels-ian-turnell-709552.jpg" width="400" alt="Amazon River">
+                <img src="images/pexels-cabinadelafoto-12768099.jpg" width="400" alt="Cartagena">
+            </section>
+        </main>
+
+        <footer>Copyright @ 2023 AZ</footer>
+        <div id="tooltip"></div>
+        <div id="countryModal">
+            <div >
+                <span id="closeModal">&times;</span>
+                <h2 id="countryName"></h2>
+                <div id="countryModel-content">
+                    <img id="countryImage" src="" alt="Country">
+                    <div >
+                        <p id="countryInfo"></p>
+                        <a id="readMoreLink" href="#" target="_blank">Read More</a>
+                    </div>
                     
-                <p> Explore the Galápagos Islands for unique wildlife encounters, hike the Andes Mountains for breathtaking vistas, or relax on the pristine beaches of the Caribbean and Pacific coasts.
-                    Whether you're an adventure seeker, a history buff, or simply looking to immerse yourself in a vibrant and diverse culture, South America beckons with its warmth, beauty, and an array of experiences that promise to leave a lasting impression.</p>  
-                <p>The continent's warmth extends beyond its tropical climates to the hospitality of its people. Engage in lively conversations in the bustling markets, savor local delicacies, and partake in the festivities that characterize South American life.</p>
+                </div>
+                
+                
+                
             </div>
-
-            <div>
-                <img src="images/pexels-pixabay-40996.jpg" alt="South America map." width="500">
-            </div>
-
-        </section>
-
-        ><section class="images_flex">
-            <img src="images/pexels-chelsea-cook-2929906.jpg" width="400" alt="Machu Picchu">
-            <img src="images/pexels-luis-dalvan-1684166.jpg" width="400" alt="Patagonia">
-            <img src="images/pexels-luan-gonçalves-13911606.jpg" width="400" alt="Rio de Janeiro">
-            <img src="images/pexels-ian-turnell-709552.jpg" width="400" alt="Amazon River">
-            <img src="images/pexels-cabinadelafoto-12768099.jpg" width="400" alt="Cartagena">
-        </section>
-
-    </main>
-    <footer>Copyright @ 2023 AZ</footer>
-
-</body>
-    
+        </div>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="jsc/scripts.js"></script>
+    </body>
+</html>   

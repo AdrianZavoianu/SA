@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map of South America</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        svg {
+            width: 100%;
+            height: auto;
+            max-width: 960px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        // Width and height of the SVG
+        var width = 960,
+            height = 600;
+
+        // Create SVG element
+        var svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        // Define map projection
+        var projection = d3.geoMercator()
+                           .center([-58, -15]) // Center the map over South America
+                           .scale(400)
+                           .translate([width / 2, height / 2]);
+
+        // Define path generator
+        var path = d3.geoPath().projection(projection);
+
+        // Load and display the GeoJSON
+        d3.json("data/south-america.geojson").then(function(data) {
+            svg.selectAll("path")
+               .data(data.features)
+               .enter()
+               .append("path")
+               .attr("d", path)
+               .attr("fill", "lightgray") // Default fill color
+               .attr("stroke", "white") // Stroke color
+               .attr("stroke-width", 1);
+        });
+
+  
+
+    </script>
+</body>
+</html>

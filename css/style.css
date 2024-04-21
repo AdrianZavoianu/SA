@@ -58,7 +58,7 @@ nav li {
 }
 
 nav ul li a:hover{
-    color:rgb(143, 217, 143);
+    color: #00C853;
 }
 
 
@@ -67,8 +67,8 @@ nav ul li a:focus{
 }
 
 nav ul li a.active {
-    border-bottom: 1px solid #00C853;
-    color: #00C853;
+    border-bottom: 1px solid rgb(143, 217, 143);
+    color:rgb(143, 217, 143);
 
 }
 

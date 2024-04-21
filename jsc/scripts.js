@@ -34,7 +34,7 @@ d3.json("data/south-america.geojson").then(function(data) {
         })
         .attr("stroke", "black")
         .attr("stroke-width", 1)
-        
+
         .on("mouseover", showTooltip )
         .on("mouseout", hideTooltip)
         .on("focus", showTooltip)
@@ -69,9 +69,10 @@ function hideTooltip(event, d) {
 
 
 document.addEventListener("DOMContentLoaded", function() {
+    
     var links = document.querySelectorAll('nav a');
     var currentUrl = window.location.pathname.split('/').pop();
-
+    console.log(window.location.href)
     links.forEach(link => {
         if (link.getAttribute('href') === currentUrl) {
             link.classList.add('active');

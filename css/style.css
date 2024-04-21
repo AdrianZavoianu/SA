@@ -58,6 +58,11 @@ nav ul li a:hover{
     color:rgb(143, 217, 143);
 }
 
+
+nav ul li a:focus{
+    color:rgb(143, 217, 143);
+}
+
 nav ul li a.active {
     border-bottom: 1px solid #00C853;
     color: #00C853;
@@ -156,7 +161,7 @@ main{
 
 .images-container img{
     margin: 1em auto;
-    width: 85%;
+    width: 85%git;
 }
 
 footer{

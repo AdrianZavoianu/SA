@@ -34,31 +34,39 @@ d3.json("data/south-america.geojson").then(function(data) {
         })
         .attr("stroke", "black")
         .attr("stroke-width", 1)
-        .on("mouseover", function(event, d) {
-            if (['Peru', 'Colombia', 'Brazil', 'Chile', 'Argentina'].includes(d.properties.name)) {
-                d3.select(this).style("fill", "rgba(76, 175, 80,0.5)");
-                tooltip.style("visibility", "visible")
-                   .html(`<img src="images/${d.properties.name}.svg" alt="Flag of ${d.properties.name}" style="width: 20px; margin-bottom:4px; vertical-align: middle;"> ${d.properties.name}`)
-                   .style("left", (event.pageX + 10) + "px")
-                   .style("top", (event.pageY + 10) + "px");
-            }
-        })
+        
+        .on("mouseover", showTooltip )
+        .on("mouseout", hideTooltip)
+        .on("focus", showTooltip)
+        .on("blur", hideTooltip)
 
         .on("mousemove", function(event) {
             tooltip.style("left", (event.pageX + 10) + "px")
                    .style("top", (event.pageY + 10) + "px");
         })
 
-        .on("mouseout", function(event, d) {
-            tooltip.style("visibility", "hidden");
-            if (['Peru', 'Colombia', 'Brazil', 'Chile', 'Argentina'].includes(d.properties.name)) {
-                d3.select(this).style("fill", "#4CAF50");
-            }})
-        
         .on("click", function(event, d) {
             openModal(d);
         });
 })
+
+function showTooltip(event, d){
+    if (['Peru', 'Colombia', 'Brazil', 'Chile', 'Argentina'].includes(d.properties.name)) {
+        d3.select(this).style("fill", "rgba(76, 175, 80,0.5)");
+        tooltip.style("visibility", "visible")
+           .html(`<img src="images/${d.properties.name}.svg" alt="Flag of ${d.properties.name}" style="width: 20px; margin-bottom:4px; vertical-align: middle;"> ${d.properties.name}`)
+           .style("left", (event.pageX + 10) + "px")
+           .style("top", (event.pageY + 10) + "px");
+    }
+}
+
+function hideTooltip(event, d) {
+    tooltip.style("visibility", "hidden");
+    if (['Peru', 'Colombia', 'Brazil', 'Chile', 'Argentina'].includes(d.properties.name)) {
+        d3.select(this).style("fill", "#4CAF50");
+    }}
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     var links = document.querySelectorAll('nav a');

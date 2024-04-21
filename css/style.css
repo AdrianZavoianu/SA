@@ -155,7 +155,8 @@ main{
 }
 
 .images-container img{
-    margin: 0.4em auto;
+    margin: 1em auto;
+    width: 85%;
 }
 
 footer{

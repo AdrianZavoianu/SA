@@ -5,6 +5,9 @@
     font-size: 1.125rem;
     background-color: #121212; /* Dark background for the whole page */
     color: #E0E0E0;
+    max-width: 750px;
+    min-width: 400px;
+    margin:0 auto;
 }
 
 p{
@@ -71,6 +74,8 @@ nav ul li a.active {
 
 main{
     
+   
+
     
 }
 
@@ -81,11 +86,15 @@ main{
 #map{
     width: 100%;
     height: 600px;
+    display: flex;
+    justify-content: center;
+
+
     
 }
 
 #map-svg{
-    width: 99%;
+    width: 500px;
     height: 100%;
 }
 
@@ -108,11 +117,11 @@ main{
     z-index: 1000; /* Sit on top */
     left: 0;
     top: 0;
-    max-width: 100%;
     height: 100%;  
-    overflow: auto; /* Enable scroll if needed */
+    /* overflow: auto; Enable scroll if needed */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     font-size: 0.75em;
+    width:100%;
 }
 
 #countryModal h2{
@@ -185,3 +194,20 @@ footer{
     margin-bottom: 1em;    
 }
 
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+.skip-link:focus {
+    outline: 2px solid #f90;
+}

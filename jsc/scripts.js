@@ -8,11 +8,22 @@ const svg = d3.select("#map-svg")
 const tooltip = d3.select("#tooltip");
 
 const projection = d3.geoMercator()
-                .center([-21, -15]) // Center the map over South America
+                .center([-25, -15]) // Center the map over South America
                 .scale(400)
                 .translate([width / 2, height / 2])
 
 const path = d3.geoPath().projection(projection)
+
+document.addEventListener("DOMContentLoaded", function() {
+    var links = document.querySelectorAll('nav a');
+    var currentUrl = window.location.pathname.split('/').pop();
+    links.forEach(link => {
+        if (link.getAttribute('href') === currentUrl) {
+            link.classList.add('active');
+        }
+    });
+});
+
 
 d3.json("data/south-america.geojson").then(function(data) {
     svg.selectAll("path")
@@ -68,22 +79,16 @@ function hideTooltip(event, d) {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    
-    var links = document.querySelectorAll('nav a');
-    var currentUrl = window.location.pathname.split('/').pop();
-    console.log(window.location.href)
-    links.forEach(link => {
-        if (link.getAttribute('href') === currentUrl) {
-            link.classList.add('active');
-        }
-    });
-});
 
 // Close the modal when the 'x' is clicked
-document.getElementById("closeModal").onclick = function() {
-    document.getElementById("countryModal").style.display = "none";
+
+if (document.getElementById("closeModal")){
+    document.getElementById("closeModal").onclick = function() {
+        document.getElementById("countryModal").style.display = "none";
+    }
 }
+
+
 
 let countriesDescriptions={
     "Brazil":"Brazil, a country of immense size and cultural richness, is known for its lively festivals, especially the world-famous Rio Carnival.",

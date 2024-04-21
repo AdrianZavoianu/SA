@@ -195,19 +195,18 @@ footer{
 }
 
 .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #000;
+    position: fixed;  
+    left: 10px;       
+    top: -40px;       
+    background-color: #000;
     color: #fff;
-    padding: 8px;
-    z-index: 100;
+    padding: 10px 20px; 
+    z-index: 1000;    
     transition: top 0.3s;
+    border-radius: 5px; 
 }
 
 .skip-link:focus {
-    top: 10px;
-}
-.skip-link:focus {
-    outline: 2px solid #f90;
+    top: 15px;  
+    outline: 3px solid #f90; 
 }

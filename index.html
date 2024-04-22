@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     </head>
-
     <body>
         <a href="#main" class="skip-link">Skip to Main Content</a>
         <header>
@@ -23,10 +22,8 @@
                 </ul>
             </nav>
         </header>
-
-        <main id="main">
+        <main id="main-home">
             <h1>Visiting South America</h1>
-
             <section class="text-container">
                 <p>South America is a captivating continent that boasts a rich tapestry of cultures, landscapes, and experiences, making it a
                      must-visit destination for travelers seeking diversity and adventure. From the vibrant rhythms of Brazil's Carnival to the awe-inspiring landscapes of Patagonia, South America offers a wide array of attractions.The continent is home to some of the world's most iconic landmarks, including the ancient ruins of Machu Picchu in Peru, the Christ the Redeemer statue overlooking Rio de Janeiro, and the Amazon Rainforest, the planet's largest tropical rainforest with an unparalleled biodiversity.
@@ -34,13 +31,18 @@
                 <br>    
                 <p><em>Click on the map below for more info</em>.</p>   
             </section>
-
             <section id="map">
                 <svg id="map-svg"></svg>
             </section>
-
-
-            <div class="carousel-container">
+            <section class="text-container">
+                <p>Explore the Galápagos Islands for unique wildlife encounters, hike the Andes Mountains for breathtaking vistas, or relax on the pristine beaches of the Caribbean and Pacific coasts.
+                    Whether you're an adventure seeker, a history buff, or simply looking to immerse yourself in a vibrant and diverse culture, South America beckons with its warmth, beauty, and an array of experiences that promise to leave a lasting impression. 
+                The continent's warmth extends beyond its tropical climates to the hospitality of its people. Engage in lively conversations in the bustling markets, savor local delicacies, and partake in the festivities that characterize South American life.
+                  Each country has its own unique identity, reflected in the lively street markets of Colombia, the tango-filled streets of Buenos Aires, and the indigenous communities of Bolivia.
+                    For nature enthusiasts, South America is a paradise with its diverse ecosystems.</p>
+  
+            </section>
+            <section class="carousel-container">
                 <div class="carousel">
                     <div class="slides">
                         <img src="images/pexels-chelsea-cook-2929906.jpg"  alt="Machu Picchu" class="slide">
@@ -53,9 +55,8 @@
                     <a class="next" onclick="changeSlide(1)">&#10095;</a>
                 </div>
                 <button id="playButton">Play</button>
-            </div>
+            </section>
         </main>
-
         <footer>Copyright @ 2024 AZ</footer>
         <div id="tooltip"></div>
         <div id="countryModal">
@@ -66,9 +67,9 @@
                     <img id="countryImage" src="" alt="Country">
                     <div >
                         <p id="countryInfo"></p>
+                        <br>
                         <a id="readMoreLink" href="#" target="_blank">Read More</a>
-                    </div>
-                    
+                    </div>       
                 </div>
             </div>
         </div>

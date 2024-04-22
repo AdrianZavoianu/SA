@@ -34,40 +34,43 @@
                      vibrant markets, and breathtaking natural beauty make it a destination that seamlessly blends history, adventure, and culinary delights.</p>
         </section>
         <section class="country-sites">
-
             <div class="site">
                 <p><b>Machu Picchu: </b>A UNESCO World Heritage site and one of the New Seven Wonders of the World, Machu Picchu is an ancient Incan city nestled in the Andes, offering breathtaking views and a glimpse into the rich history of the region.</p>
                 <img src="images/pexels-chelsea-cook-2929906.jpg" alt="Machu Picchu">
             </div>
-
             <div class="site">
                 <p><b>Cusco: </b>The historic capital of the Inca Empire, Cusco is a city with well-preserved colonial architecture and a lively atmosphere. Explore the Plaza de Armas and visit the Qorikancha, the Inca Sun Temple.</p>
                 <img src="images/pexels-max-parada-valdivia-14377905.jpg" alt="Cusco">
             </div>
-
             <div class="site">
                 <p><b>Sacred Valley: </b>A picturesque valley with charming villages and ancient ruins, the Sacred Valley offers a tranquil escape and a chance to experience Andean culture.</p>
                 <img src="images/pexels-melih-akkus-19153612.jpg" alt="Sacred Valley">
             </div>
-
             <div class="site">
                 <p><b>Lake Titicaca: </b>The highest navigable lake in the world, Lake Titicaca is known for its stunning scenery and unique floating Uros Islands, where indigenous communities live.</p>
                 <img src="images/pexels-leif-olson-19140622.jpg"  alt="Lake Titicaca">
             </div>
-
             <div class="site">
                 <p><b>Nazca Lines: </b>These mysterious geoglyphs etched into the desert floor are a UNESCO World Heritage site, sparking intrigue and speculation about their purpose.</p>
                 <img src="images/pexels-janeth-charris-17428661.jpg"  alt="Nazca Lines">
             </div>
-
             <div class="site">
                 <p><b>Arequipa: </b>Known as the "White City" due to its colonial architecture built from white volcanic stone, Arequpa is surrounded by dramatic landscapes, including the Colca Canyon.</p>
                 <img src="images/pexels-sergio-benavides-17043608.jpg"  alt="Arequipa">
             </div>
         </section>
     </main>
-    <footer>Copyright @ 2023 AZ</footer>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="jsc/scripts.js"></script>
+    <footer>Copyright @ 2024 AZ</footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var links = document.querySelectorAll('nav a');
+            var currentUrl = window.location.pathname.split('/').pop();
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentUrl) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
     

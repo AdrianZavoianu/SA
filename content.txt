@@ -40,3 +40,13 @@ Soft Green (Secondary Accents): #4CAF50 - A softer shade of green, useful for le
                 <img src="images/pexels-ian-turnell-709552.jpg" width="400" alt="Amazon River">
                 <img src="images/pexels-cabinadelafoto-12768099.jpg" width="400" alt="Cartagena">
             </section>
+
+    .images-container{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.images-container img{
+    margin: 1em auto;
+    width: 85%;
+}

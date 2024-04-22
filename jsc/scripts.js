@@ -1,19 +1,4 @@
-const width = 960
-const height = 420
-
-const svg = d3.select("#map-svg")
-            .attr("width", width)
-            .attr("height", height);
-
-const tooltip = d3.select("#tooltip");
-
-const projection = d3.geoMercator()
-                .center([-21, -15]) // Center the map over South America
-                .scale(400)
-                .translate([width / 2, height / 2])
-
-const path = d3.geoPath().projection(projection)
-
+// Active nav link styling
 document.addEventListener("DOMContentLoaded", function() {
     var links = document.querySelectorAll('nav a');
     var currentUrl = window.location.pathname.split('/').pop();
@@ -25,6 +10,23 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+//Interactive map
+const width = 960
+const height = 420
+
+const svg = d3.select("#map-svg")
+            .attr("width", width)
+            .attr("height", height);
+
+const tooltip = d3.select("#tooltip");
+
+const projection = d3.geoMercator()
+                .center([-21, -15]) // map centering parameters
+                .scale(430)
+                .translate([width / 2, height / 2])
+
+const path = d3.geoPath().projection(projection)
+
 d3.json("data/south-america.geojson").then(function(data) {
     svg.selectAll("path")
        .data(data.features)
@@ -33,15 +35,14 @@ d3.json("data/south-america.geojson").then(function(data) {
        .attr("d", path)
        .attr("stroke-width", 2)
        .attr("fill", function(d) {
-            // Check the country name and color accordingly
             if (d.properties.name === 'Peru' || 
                 d.properties.name === 'Colombia' || 
                 d.properties.name === 'Brazil' || 
                 d.properties.name === 'Chile' || 
                 d.properties.name === 'Argentina') {
-                return "#4CAF50"; // Specific countries in light green rgba(0, 200, 83,0.2) rgba(76, 175, 80,0.2)
+                return "#4CAF50"; 
             }
-            return "lightgray"; // Other countries
+            return "lightgray"; 
         })
         .attr("stroke", "black")
         .attr("stroke-width", 1)
@@ -78,17 +79,13 @@ function hideTooltip(event, d) {
     }}
 
 
-
-
-// Close the modal when the 'x' is clicked
+// Map countries windows 
 
 if (document.getElementById("closeModal")){
     document.getElementById("closeModal").onclick = function() {
         document.getElementById("countryModal").style.display = "none";
     }
 }
-
-
 
 let countriesDescriptions={
     "Brazil":"Brazil, a country of immense size and cultural richness, is known for its lively festivals, especially the world-famous Rio Carnival.",
@@ -98,7 +95,6 @@ let countriesDescriptions={
     "Colombia":"Colombia is a country that has transcended its tumultuous past to become a vibrant destination."
 }
 
-// Function to open the modal with specific country info
 function openModal(country) {
     var modal = document.getElementById("countryModal");
     document.getElementById("countryName").textContent = country.properties.name;
@@ -109,20 +105,20 @@ function openModal(country) {
     modal.style.display = "block";
 }
 
-let slideIndex = 0;
-showSlides();  // Call without parameter since slideIndex is global
+// Images carousel
 
-let slideInterval;  // Declare the interval variable without setting it
+let slideIndex = 0;
+showSlides();  
+
+let slideInterval;
 
 document.getElementById('playButton').addEventListener('click', function() {
     if (this.textContent === 'Play') {
-        // Start the slider
         slideInterval = setInterval(function() { changeSlide(1); }, 5000);
-        this.textContent = 'Pause'; // Change button text to Pause
+        this.textContent = 'Pause';
     } else {
-        // Stop the slider
         clearInterval(slideInterval);
-        this.textContent = 'Play';  // Change button text back to Play
+        this.textContent = 'Play'; 
     }
 });
 
@@ -138,6 +134,6 @@ function changeSlide(n) {
 
 function showSlides() {
     let slides = document.getElementsByClassName("slide");
-    let totalWidth = slides.length * 100;  // Assuming each slide is 100% of the viewport width
+    let totalWidth = slides.length * 100; 
     document.querySelector(".slides").style.transform = `translateX(-${slideIndex * 100}%)`;
 }

@@ -69,9 +69,17 @@
             </div>
         </section>
     </main>
-    <footer>Copyright @ 2023 AZ</footer>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="jsc/scripts.js"></script>
-
+    <footer>Copyright @ 2024 AZ</footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var links = document.querySelectorAll('nav a');
+            var currentUrl = window.location.pathname.split('/').pop();
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentUrl) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
     

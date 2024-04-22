@@ -8,7 +8,7 @@ const svg = d3.select("#map-svg")
 const tooltip = d3.select("#tooltip");
 
 const projection = d3.geoMercator()
-                .center([-25, -15]) // Center the map over South America
+                .center([-21, -15]) // Center the map over South America
                 .scale(400)
                 .translate([width / 2, height / 2])
 
@@ -107,4 +107,37 @@ function openModal(country) {
     document.getElementById("readMoreLink").href =country.properties.name.toLowerCase() + ".html"; 
     
     modal.style.display = "block";
+}
+
+let slideIndex = 0;
+showSlides();  // Call without parameter since slideIndex is global
+
+let slideInterval;  // Declare the interval variable without setting it
+
+document.getElementById('playButton').addEventListener('click', function() {
+    if (this.textContent === 'Play') {
+        // Start the slider
+        slideInterval = setInterval(function() { changeSlide(1); }, 5000);
+        this.textContent = 'Pause'; // Change button text to Pause
+    } else {
+        // Stop the slider
+        clearInterval(slideInterval);
+        this.textContent = 'Play';  // Change button text back to Play
+    }
+});
+
+function changeSlide(n) {
+    slideIndex += n;
+    if (slideIndex >= document.getElementsByClassName("slide").length) {
+        slideIndex = 0;
+    } else if (slideIndex < 0) {
+        slideIndex = document.getElementsByClassName("slide").length - 1;
+    }
+    showSlides();
+}
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    let totalWidth = slides.length * 100;  // Assuming each slide is 100% of the viewport width
+    document.querySelector(".slides").style.transform = `translateX(-${slideIndex * 100}%)`;
 }

@@ -32,23 +32,31 @@
                      must-visit destination for travelers seeking diversity and adventure. From the vibrant rhythms of Brazil's Carnival to the awe-inspiring landscapes of Patagonia, South America offers a wide array of attractions.The continent is home to some of the world's most iconic landmarks, including the ancient ruins of Machu Picchu in Peru, the Christ the Redeemer statue overlooking Rio de Janeiro, and the Amazon Rainforest, the planet's largest tropical rainforest with an unparalleled biodiversity.
                     South America's cultural diversity is evident in its festivals, cuisine, and traditions.</p>
                 <br>    
-                <p>Click on map below for more details.</p>   
+                <p><em>Click on the map below for more info</em>.</p>   
             </section>
 
             <section id="map">
                 <svg id="map-svg"></svg>
             </section>
 
-            <section class="images-container">
-                <img src="images/pexels-chelsea-cook-2929906.jpg" width="400" alt="Machu Picchu">
-                <img src="images/pexels-luis-dalvan-1684166.jpg" width="400" alt="Patagonia">
-                <img src="images/pexels-luan-gonçalves-13911606.jpg" width="400" alt="Rio de Janeiro">
-                <img src="images/pexels-ian-turnell-709552.jpg" width="400" alt="Amazon River">
-                <img src="images/pexels-cabinadelafoto-12768099.jpg" width="400" alt="Cartagena">
-            </section>
+
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="slides">
+                        <img src="images/pexels-chelsea-cook-2929906.jpg"  alt="Machu Picchu" class="slide">
+                        <img src="images/pexels-luis-dalvan-1684166.jpg"  alt="Patagonia" class="slide">
+                        <img src="images/pexels-luan-gonçalves-13911606.jpg"  alt="Rio de Janeiro" class="slide">
+                        <img src="images/pexels-ian-turnell-709552.jpg"  alt="Amazon River" class="slide">
+                        <img src="images/pexels-cabinadelafoto-12768099.jpg"  alt="Cartagena" class="slide">
+                    </div>
+                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                </div>
+                <button id="playButton">Play</button>
+            </div>
         </main>
 
-        <footer>Copyright @ 2023 AZ</footer>
+        <footer>Copyright @ 2024 AZ</footer>
         <div id="tooltip"></div>
         <div id="countryModal">
             <div >

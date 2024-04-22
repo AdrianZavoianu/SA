@@ -32,3 +32,11 @@ Soft Green (Secondary Accents): #4CAF50 - A softer shade of green, useful for le
     height:275px;
     padding: 15px;
 } */
+
+            <section class="images-container">
+                <img src="images/pexels-chelsea-cook-2929906.jpg" width="400" alt="Machu Picchu">
+                <img src="images/pexels-luis-dalvan-1684166.jpg" width="400" alt="Patagonia">
+                <img src="images/pexels-luan-gonçalves-13911606.jpg" width="400" alt="Rio de Janeiro">
+                <img src="images/pexels-ian-turnell-709552.jpg" width="400" alt="Amazon River">
+                <img src="images/pexels-cabinadelafoto-12768099.jpg" width="400" alt="Cartagena">
+            </section>

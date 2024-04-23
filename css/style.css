@@ -13,7 +13,7 @@
 /* Typhography */
 
 p{
-    line-height: 1.5em;
+    line-height: 1.3em;
 }
 
 h1{
@@ -69,7 +69,7 @@ nav ul li a.active {
 
 /* Main description */
 
-.text-container{
+.text-container,.text-container-bot{
     margin:1em;
 }
 
@@ -263,9 +263,9 @@ footer{
     margin-bottom: 1em;    
 }
 
-/*Tablet 800px*/
+/*Tablet 600px*/
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
 
     body{
         max-width: 1000px; 
@@ -290,15 +290,54 @@ footer{
     }
 
     .carousel {
-        margin:0em 6em 0.5em 6em;
+        margin:0em 2em 0.5em 2em;
     }
 
     #countryModal>div {
-
         font-size: 1em;
         width: 600px; 
     }
+
+    #readMoreLink{
+        font-size: 1.25em;
+    }
     
+}
+
+/*Tablet 900px*/
+
+@media (min-width: 900px) {
+
+    #main-home{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto auto auto auto;
+        gap: 10px;
+    }
+    #main-home h1{
+        grid-column: 1 / -1;
+    }
+
+    #main-home .text-container{
+        grid-column: 1 / -1;
+    }
+
+    #map{
+        grid-column: 1 / 2; 
+    }
+    
+    .carousel-container{
+        max-width: 800px;
+        grid-column: 1 / -1;
+    }
+
+    .country-sites{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 1em;
+    }
+
 }
 
 
@@ -307,8 +346,10 @@ footer{
 @media (min-width: 1200px) {
 
     body{
-        max-width: 2000px; 
+        max-width: 2000px;
+        font-size: 1.25rem; 
     }
+
     p{
         font-size: 1.25em;
     }
@@ -334,10 +375,51 @@ footer{
     .logo img{
         height:4em;
     }
+    #main-home{
+        display: grid;
+        grid-template-columns: 0.6fr 1fr; 
+        grid-template-rows: auto auto auto auto;
+        gap: 10px;
+    }
+    #main-home h1{
+        grid-column: 1 / -1;
+    }
+
+    #main-home .text-container{
+        grid-column: 1 / -1;
+    }
+
+    #map{
+        grid-column: 1 / 2; 
+    }
+
+    .carousel-container{
+        max-width: 800px;
+        grid-column: 2 / 2;
+        grid-row: 3 / 4;
+    }
+
+    #main-home .text-container-bot{
+        grid-column: 1 / -1;
+    }
+
+    .carousel {
+        margin:0em 1em 0.5em 1em;
+    }
+    #countryModal>div {
+        font-size: 1.25em;
+        width: 800px; 
+    }
+
+}
+
+/*Desktop 1600px*/
+
+@media (min-width: 1600px) {
 
     #main-home{
         display: grid;
-        grid-template-columns: 1fr 2fr; 
+        grid-template-columns: 0.6fr 1fr auto; 
         grid-template-rows: auto auto 1fr;
         gap: 10px;
     }
@@ -356,20 +438,22 @@ footer{
 
     .carousel-container{
         max-width: 750px;
-        grid-column: 2 / 3;
+        grid-column: 3 / 3;
         grid-row: 3 / 4;
-
+        margin-top: 0;
     }
 
-    .carousel {
-        margin:0em 1em 0.5em 1em;
-    }
-    #countryModal>div {
-
-        font-size: 1.25em;
-        width: 800px; 
+    #main-home .text-container-bot{
+        grid-column: 2/3;
+        margin-top: 0;
     }
 
+    .country-sites{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 1em;
+    }
 
 
 }

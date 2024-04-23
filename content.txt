@@ -1,8 +1,4 @@
-<p> Explore the Galápagos Islands for unique wildlife encounters, hike the Andes Mountains for breathtaking vistas, or relax on the pristine beaches of the Caribbean and Pacific coasts.
-                    Whether you're an adventure seeker, a history buff, or simply looking to immerse yourself in a vibrant and diverse culture, South America beckons with its warmth, beauty, and an array of experiences that promise to leave a lasting impression.</p>  
-                <p>The continent's warmth extends beyond its tropical climates to the hospitality of its people. Engage in lively conversations in the bustling markets, savor local delicacies, and partake in the festivities that characterize South American life.</p>
-                 <p> Each country has its own unique identity, reflected in the lively street markets of Colombia, the tango-filled streets of Buenos Aires, and the indigenous communities of Bolivia.
-                    For nature enthusiasts, South America is a paradise with its diverse ecosystems.</p> 
+<p> </p> 
 <img src="images/pexels-pixabay-40996.jpg" alt="South America map." width="500">
 
 Vibrant Green (Accents/Buttons): #00C853 - A bright, lively green that stands out against the dark and grey, suitable for call-to-action buttons, icons, or important highlights.
